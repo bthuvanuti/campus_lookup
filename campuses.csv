@@ -1,35 +1,37 @@
-campus_code,cosar_long_name,term_type,cosar_short_name
-00,Systemwide,0,Systemwide
-01,Chancellors Office,0,Chan Office
-02,Consortium,0,Consortium
-05,"California State University, East Bay",S,East Bay
-06,"California State University, Monterey Bay",S,Monterey Bay
-07,California Maritime Academy,S,Maritime Academy
-10,"California State Polytechnic University, Pomona",S,Pomona
-15,"California Polytechnic State University,San Luis Obispo",S,San Luis Obispo
-20,"California State University, Chico",S,Chico
-25,"California State University, Fresno",S,Fresno
-26,Bakersfield Off Campus Center,S,Bakersfield-OCC
-30,"California State Polytechnic University, Humboldt",S,Humboldt
-35,"California State University, Bakersfield",S,Bakersfield
-40,"California State University, Long Beach",S,Long Beach
-45,"California State University, Los Angeles",S,Los Angeles
-50,"California State University, Fullerton",S,Fullerton
-55,"California State University, Dominguez Hills",S,Dominguez Hills
-60,"Sacramento State University, Sacramento",S,Sacramento
-63,"California State University, San Bernardino",S,San Bernardino
-65,San Diego State University,S,San Diego
-66,Calexico Off Campus Center,S,Calexico
-68,"California State University, San Marcos",S,San Marcos
-70,"California State University, Northridge",S,Northridge
-73,"California State University, Channel Islands",S,Channel Islands
-75,San Francisco State University,S,San Francisco
-80,San Jose State University,S,San Jose
-85,Sonoma State University,S,Sonoma
-90,"California State University, Stanislaus",S,Stanislaus
-93,Summer Arts,0,Summer Arts
-94,Moss Landing,S,Moss Landing
-95,C.O. Systemwide Provisions,0,Systemwide Prov
-96,CalStateTEACH,0,CalStateTEACH
-97,International Programs,0,Intl Programs
-99,System Summary - Campuses,0,All Campuses
+"campus_code","business_unit","hr_database_name","chrs_company","athena_abbrev","cirs_campus_code","cirs_alpha_code","firms_state_agency_code","firms_campus_id","cosar_campus_name_long","cosar_academic_term","cosar_campus_name_abbrev","campus_only_flag","campus_and_co_flag","apdb_campus_flag","cs_database_name","cirs_campus_name","chrs_cutover_date","cirs_flag"
+"35","BKCMP","hchrprd","BAK","bk","35","H","6650","BK","California State University, Bakersfield","S","Bakersfield","true","true","true","cbakprd","BKERSFIELD","2026-03-22","true"
+"01","COCSU","hlbprd",,"lb","40","A","6620","CO","Chancellors Office","0","Chancellor's Office","false","true","false","clbprd","CHNCLR OFF",,"true"
+"73","CICMP","hchrprd","CIS","ci","72","Y","6850","CI","California State University, Channel Islands","S","Channel Islands","true","true","true","cciprd","CHANNEL IS","2023-11-12","true"
+"20","CHICO","hchrprd","CHI","ch","20","E","6680","CH","California State University, Chico","S","Chico","true","true","true","cchiprd","CHICO","2025-03-23","true"
+"55","DHCMP","hchrprd","DOM","dh","55","L","6690","DH","California State University, Dominguez Hills","S","Dominguez Hills","true","true","true","cdhprd","DOMINGUEZ","2026-03-22","true"
+"05","HW001","hebprd",,"eb","05","B","6720","EB","California State University, East Bay","S","East Bay","true","true","true","cebprd","EAST BAY",,"true"
+"25","FRSNO","hfrprd",,"fr","25","F","6700","FR","California State University, Fresno","S","Fresno","true","true","true","cfrprd","FRESNO",,"true"
+"50","FLCMP","hchrprd","FUL","fl","50","K","6710","FL","California State University, Fullerton","S","Fullerton","true","true","true","cfulprd","FULLERTON","2023-11-12","true"
+"30","HMCMP","hhumprd",,"hm","30","G","6730","HM","California State Polytechnic University, Humboldt","S","Humboldt","true","true","true","chumprd","HUMBOLDT",,"true"
+"40","LBCMP","hlbprd",,"lb","40","I","6740","LB","California State University, Long Beach","S","Long Beach","true","true","true","clbprd","LONG BEACH",,"true"
+"45","CSULA","hlaprd",,"la","45","J","6750","LA","California State University, Los Angeles","S","Los Angeles","true","true","true","claprd","LA",,"true"
+"07","MACMP","hchrprd","CMA","ma","07","W","6752","MA","California Maritime Academy","S","Maritime Academy","true","true","true","cmaprd","MARITIME","2023-11-12","true"
+"06","MB000","hchrprd","MBY","mb","06","V","6756","MB","California State University, Monterey Bay","S","Monterey Bay","true","true","true","cmbprd","MONTEREY","2026-03-22","true"
+"70","NRCMP","hnrprd",,"nr","70","P","6760","NR","California State University, Northridge","S","Northridge","true","true","true","cnrprd","NORTHRIDGE",,"true"
+"10","POCMP","hchrprd","CPP","po","10","C","6770","PO","California State Polytechnic University, Pomona","S","Pomona","true","true","true","cpomprd","POMONA","2026-03-22","true"
+"60","SACST","hchrprd","SAC","sa","60","M","6780","SA","Sacramento State University, Sacramento","S","Sacramento","true","true","true","csacprd","SACRAMENTO","2025-03-23","true"
+"63","SBCMP","hchrprd","SBU","sb","63","N","6660","SB","California State University, San Bernardino","S","San Bernardino","true","true","true","csbprd","SAN BERN","2025-03-23","true"
+"65","SDCMP","hsdprd",,"sd","65","O","6790","SD","San Diego State University","S","San Diego","true","true","true","csdprd","SAN DIEGO",,"true"
+"75","SFCMP","hsfprd",,"sf","75","Q","6800","SF","San Francisco State University","S","San Francisco","true","true","true","csfprd","SAN FRAN",,"true"
+"80","SJ000","hsjprd",,"sj","80","R","6810","SJ","San Jose State University","S","San Jose","true","true","true","csjprd","SAN JOSE",,"true"
+"15","SLCMP","hsloprd",,"sl","15","D","6820","SL","California Polytechnic State University,San Luis Obispo","S","San Luis Obispo","true","true","true","csloprd","SLO",,"true"
+"68","SMCMP","hchrprd","CSM","sm","68","U","6840","SM","California State University, San Marcos","S","San Marcos","true","true","true","csmprd","SAN MARCOS","2026-03-22","true"
+"85","SOCMP","hsonprd",,"so","85","S","6830","SO","Sonoma State University","S","Sonoma","true","true","true","csonprd","SONOMA",,"true"
+"90","STCMP","hchrprd","STA","st","90","T","6670","ST","California State University, Stanislaus","S","Stanislaus","true","true","true","cstaprd","STNISLAUS","2023-11-12","true"
+"99",,,,,,,"9999","CB","System Summary - Campuses","0","All Campuses","false","false","false",,,,"false"
+"26",,,,,,,,,"Bakersfield Off Campus Center","S","Bakersfield-OCC","false","false","false",,,,"false"
+"66","SDCMP","hsdprd",,"sd","65","O",,,"Calexico Off Campus Center","S","Calexico","false","false","true","csdprd",,,"false"
+"96",,,,,,,,,"CalStateTEACH","0","CalStateTEACH","false","false","false",,,,"false"
+"02",,,,,,,,,"Consortium","0","Consortium","false","false","false",,,,"false"
+"30","HMCMP","hhumprd",,"hm","30","G","6730","HM","California State Polytechnic University, Humboldt","S","Humboldt","false","false","false","chumprd","HUMBOLDT",,"true"
+"30","HMCMP","hhumprd",,"hm","30","G","6730","HM","California State Polytechnic University, Humboldt","S","Humboldt","false","false","false","chumprd","POLYTECHNI",,"true"
+"97",,,,,,,,,"International Programs","0","Intl Programs","false","false","false",,,,"false"
+"94","SJ000","hsjprd",,"sj","80","R",,,"Moss Landing","S","Moss Landing","false","false","true","csjprd",,,"false"
+"93",,,,,,,,,"Summer Arts","0","Summer Arts","false","false","false",,,,"false"
+"00",,,,,,,,,"Systemwide","0","Systemwide","false","false","false",,,,"false"
+"95",,,,,,,"6620","CW","C.O. Systemwide Provisions","0","Systemwide Prov","false","false","false",,,,"false"

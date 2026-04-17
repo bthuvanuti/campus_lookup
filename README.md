@@ -1,6 +1,6 @@
 # campus_lookup
 
-Fetches the CSU COSAR campus endpoint and converts its fixed-width records to CSV.
+Fetches the CSU COSAR campus endpoint and writes an expanded campus lookup CSV.
 
 Usage:
 
@@ -19,3 +19,4 @@ Notes:
   - `58`: `term_type`
   - `59-76`: `cosar_short_name`
   - `77-80`: trailing code in source data, ignored in the CSV output
+- `fetch_campuses.py` expands those endpoint rows into the campus lookup shape directly in Python, including the extra metadata columns and special-case rows.
