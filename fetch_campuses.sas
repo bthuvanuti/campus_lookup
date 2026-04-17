@@ -1,17 +1,17 @@
-%let source_url=https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus;
-%let raw_file=C:\staging\campus_lookup\campus_raw.txt;
-%let output_csv=C:\staging\campus_lookup\campuses.csv;
+%if not %symexist(source_url) %then %let source_url=https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus;
+%if not %symexist(raw_file) %then %let raw_file=%sysfunc(pathname(work))\campus_raw.txt;
+%if not %symexist(output_csv) %then %let output_csv=campuses.csv;
 
-filename campusraw "&raw_file.";
+filename campraw "&raw_file.";
 
 proc http
   url="&source_url."
   method="GET"
-  out=campusraw;
+  out=campraw;
 run;
 
 data campus_base;
-  infile campusraw lrecl=256 truncover;
+  infile campraw lrecl=256 truncover;
   length
     campus_code $2
     business_unit $8

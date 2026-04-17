@@ -6,7 +6,7 @@ BEGIN PROGRAM Python3.
 import urllib.request
 
 source_url = "https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus"
-target_path = r"C:\staging\campus_lookup\campus_raw.txt"
+target_path = "campus_raw.txt"
 
 with urllib.request.urlopen(source_url) as response:
     content = response.read().decode("utf-8")
@@ -15,7 +15,7 @@ with open(target_path, "w", encoding="utf-8", newline="\n") as handle:
     handle.write(content)
 END PROGRAM.
 
-DATA LIST FIXED FILE="C:\staging\campus_lookup\campus_raw.txt"
+DATA LIST FIXED FILE="campus_raw.txt"
  /campus_code (A2) 1-2
   cosar_campus_name_long (A55) 3-57
   cosar_academic_term (A1) 58
@@ -168,7 +168,7 @@ DELETE VARIABLES campus_and_co_sort campus_only_sort humboldt_sort.
 
 SAVE TRANSLATE
  /TYPE=CSV
- /OUTFILE="C:\staging\campus_lookup\campuses.csv"
+ /OUTFILE="campuses.csv"
  /REPLACE
  /FIELDNAMES
  /CELLS=VALUES.
