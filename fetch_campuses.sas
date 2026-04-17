@@ -1,6 +1,7 @@
-%if not %symexist(source_url) %then %let source_url=https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus;
-%if not %symexist(raw_file) %then %let raw_file=%sysfunc(pathname(work))\campus_raw.txt;
-%if not %symexist(output_csv) %then %let output_csv=campuses.csv;
+/* Update RAW_FILE and OUTPUT_CSV per run so they match your machine. */
+%let source_url=https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus;
+%let raw_file=C:\path\to\campus_raw.txt;
+%let output_csv=C:\path\to\campuses.csv;
 
 filename campraw "&raw_file.";
 

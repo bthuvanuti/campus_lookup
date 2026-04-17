@@ -23,10 +23,12 @@ Alternate Script Versions:
 - Excel / Power Query: `fetch_campuses_powerquery.m`
   Paste into Power Query's Advanced Editor to produce the same lookup table inside Excel.
 
-Working Directory Placeholders:
+Path Placeholders:
 
 - Python and R use their current working directory by default unless you pass a different output path.
-- SAS supports an optional `%let working_dir=...;` override near the top of `fetch_campuses.sas`.
+- SAS uses explicit `%let raw_file=...;` and `%let output_csv=...;` macros near the top of `fetch_campuses.sas`.
+  Update those paths per run so they match locations available to your machine / SAS environment.
+  Example: `%let raw_file=C:\path\to\campus_raw.txt;` and `%let output_csv=C:\path\to\campuses.csv;`
 - SPSS supports `DEFINE !rawfile() "..." !ENDDEFINE.` and `DEFINE !outfile() "..." !ENDDEFINE.` near the top of `fetch_campuses.sps`.
   Use those to point SPSS at the input raw file and output CSV location.
 
