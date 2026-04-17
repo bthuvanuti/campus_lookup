@@ -1,14 +1,45 @@
 # campus_lookup
 
-`fetch_campuses.py` fetches the CSU COSAR campus endpoint and builds an expanded campus lookup CSV from it.
+The main implementation is `fetch_campuses.py`, which fetches the CSU COSAR campus endpoint and builds an expanded campus lookup CSV from it.
 
-Usage:
+Primary Script:
 
 ```powershell
 python fetch_campuses.py
 ```
 
-This writes `campuses.csv` in the repo root by default.
+This writes `campuses.csv` in the repo root by default and should be treated as the source implementation for the project.
+
+Alternate Script Versions:
+
+- Python: `fetch_campuses.py`
+  The main implementation and the reference version for the project.
+- R: `fetch_campuses.R`
+  Mirrors the Python script's endpoint parsing, campus-code-based column derivations, special-row handling, and output ordering.
+- SPSS: `fetch_campuses.sps`
+  Uses a short embedded Python step to download the endpoint, then applies the same campus-code-based transformations in SPSS syntax and writes `campuses.csv`.
+- SAS: `fetch_campuses.sas`
+  Uses `PROC HTTP` to download the endpoint, parses the fixed-width rows in a DATA step, applies the same campus-code-based transformations, appends the extra Humboldt rows, sorts the output, and exports `campuses.csv`.
+- Excel / Power Query: `fetch_campuses_powerquery.m`
+  Paste into Power Query's Advanced Editor to produce the same lookup table inside Excel.
+
+Alternate Usage:
+
+```powershell
+Rscript fetch_campuses.R
+```
+
+```text
+fetch_campuses.sps
+```
+
+```text
+fetch_campuses.sas
+```
+
+```text
+fetch_campuses_powerquery.m
+```
 
 Endpoint:
 
