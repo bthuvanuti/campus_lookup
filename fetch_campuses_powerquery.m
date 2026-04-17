@@ -179,7 +179,13 @@ let
     ),
     PolytechniRow = Record.TransformFields(ExtraHumboldt, {{"cirs_campus_name", each "POLYTECHNI"}}),
     ExtraRows = Table.FromRecords({ExtraHumboldt, PolytechniRow}),
-    ExtraRowsWithFlag = Table.AddColumn(ExtraRows, "cirs_flag", each if [cirs_campus_name] <> "" then "true" else "false", type text),
+    ExtraRowsWithFlag = Table.ReplaceValue(
+        ExtraRows,
+        each [cirs_flag],
+        each if [cirs_campus_name] <> "" then "true" else "false",
+        Replacer.ReplaceValue,
+        {"cirs_flag"}
+    ),
 
     Combined = Table.Combine({WithCirsFlag, ExtraRowsWithFlag}),
 
