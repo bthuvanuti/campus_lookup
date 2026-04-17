@@ -1,0 +1,35 @@
+campus_code,cosar_long_name,term_type,cosar_short_name
+00,Systemwide,0,Systemwide
+01,Chancellors Office,0,Chan Office
+02,Consortium,0,Consortium
+05,"California State University, East Bay",S,East Bay
+06,"California State University, Monterey Bay",S,Monterey Bay
+07,California Maritime Academy,S,Maritime Academy
+10,"California State Polytechnic University, Pomona",S,Pomona
+15,"California Polytechnic State University,San Luis Obispo",S,San Luis Obispo
+20,"California State University, Chico",S,Chico
+25,"California State University, Fresno",S,Fresno
+26,Bakersfield Off Campus Center,S,Bakersfield-OCC
+30,"California State Polytechnic University, Humboldt",S,Humboldt
+35,"California State University, Bakersfield",S,Bakersfield
+40,"California State University, Long Beach",S,Long Beach
+45,"California State University, Los Angeles",S,Los Angeles
+50,"California State University, Fullerton",S,Fullerton
+55,"California State University, Dominguez Hills",S,Dominguez Hills
+60,"Sacramento State University, Sacramento",S,Sacramento
+63,"California State University, San Bernardino",S,San Bernardino
+65,San Diego State University,S,San Diego
+66,Calexico Off Campus Center,S,Calexico
+68,"California State University, San Marcos",S,San Marcos
+70,"California State University, Northridge",S,Northridge
+73,"California State University, Channel Islands",S,Channel Islands
+75,San Francisco State University,S,San Francisco
+80,San Jose State University,S,San Jose
+85,Sonoma State University,S,Sonoma
+90,"California State University, Stanislaus",S,Stanislaus
+93,Summer Arts,0,Summer Arts
+94,Moss Landing,S,Moss Landing
+95,C.O. Systemwide Provisions,0,Systemwide Prov
+96,CalStateTEACH,0,CalStateTEACH
+97,International Programs,0,Intl Programs
+99,System Summary - Campuses,0,All Campuses
