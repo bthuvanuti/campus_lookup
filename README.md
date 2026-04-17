@@ -17,11 +17,24 @@ Alternate Script Versions:
 - R: `fetch_campuses.R`
   Mirrors the Python script's endpoint parsing, campus-code-based column derivations, special-row handling, and output ordering.
 - SPSS: `fetch_campuses.sps`
-  Uses a short embedded Python step to download the endpoint, then applies the same campus-code-based transformations in SPSS syntax and writes `campuses.csv`.
+  Pure SPSS syntax version. It expects a pre-downloaded `campus_raw.txt`, then applies the same campus-code-based transformations and writes `campuses.csv`.
 - SAS: `fetch_campuses.sas`
   Uses `PROC HTTP` to download the endpoint, parses the fixed-width rows in a DATA step, applies the same campus-code-based transformations, appends the extra Humboldt rows, sorts the output, and exports `campuses.csv`.
 - Excel / Power Query: `fetch_campuses_powerquery.m`
   Paste into Power Query's Advanced Editor to produce the same lookup table inside Excel.
+
+Working Directory Placeholders:
+
+- Python and R use their current working directory by default unless you pass a different output path.
+- SAS supports an optional `%let working_dir=...;` override near the top of `fetch_campuses.sas`.
+- SPSS supports `DEFINE !rawfile() "..." !ENDDEFINE.` and `DEFINE !outfile() "..." !ENDDEFINE.` near the top of `fetch_campuses.sps`.
+  Use those to point SPSS at the input raw file and output CSV location.
+
+SPSS Input Requirement:
+
+- Before running `fetch_campuses.sps`, download the raw endpoint response and save it as `campus_raw.txt`.
+- Source URL: `https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus`
+- Point `!rawfile` at that downloaded file and `!outfile` at the desired CSV output path.
 
 Alternate Usage:
 

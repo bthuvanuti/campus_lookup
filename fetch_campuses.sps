@@ -1,25 +1,22 @@
 * Campus lookup build from CSU COSAR endpoint.
-* Writes the expanded campus lookup CSV using SPSS syntax plus a short Python download step.
-* Requires IBM SPSS Statistics with Python integration enabled.
+* Pure SPSS syntax version.
+* Requires a pre-downloaded campus_raw.txt file.
 
-BEGIN PROGRAM Python3.
-import urllib.request
+DEFINE !rawfile() "campus_raw.txt" !ENDDEFINE.
+DEFINE !outfile() "campuses.csv" !ENDDEFINE.
+* Optional: replace the values above with full paths.
+* Example:
+*   DEFINE !rawfile() "C:/temp/campus_lookup/campus_raw.txt" !ENDDEFINE.
+*   DEFINE !outfile() "C:/temp/campus_lookup/campuses.csv" !ENDDEFINE.
+*
+* Download the raw input file from:
+*   https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus
 
-source_url = "https://cmsgwprd.cmsdc.calstate.edu/csu/rest/cosar/v1/campus"
-target_path = "campus_raw.txt"
-
-with urllib.request.urlopen(source_url) as response:
-    content = response.read().decode("utf-8")
-
-with open(target_path, "w", encoding="utf-8", newline="\n") as handle:
-    handle.write(content)
-END PROGRAM.
-
-DATA LIST FIXED FILE="campus_raw.txt"
- /campus_code (A2) 1-2
-  cosar_campus_name_long (A55) 3-57
-  cosar_academic_term (A1) 58
-  cosar_campus_name_abbrev (A18) 59-76.
+DATA LIST FIXED FILE=!rawfile
+ /campus_code 1-2 (A)
+  cosar_campus_name_long 3-57 (A)
+  cosar_academic_term 58 (A)
+  cosar_campus_name_abbrev 59-76 (A).
 
 STRING
  business_unit (A8)
@@ -168,7 +165,7 @@ DELETE VARIABLES campus_and_co_sort campus_only_sort humboldt_sort.
 
 SAVE TRANSLATE
  /TYPE=CSV
- /OUTFILE="campuses.csv"
+ /OUTFILE=!outfile
  /REPLACE
  /FIELDNAMES
  /CELLS=VALUES.
