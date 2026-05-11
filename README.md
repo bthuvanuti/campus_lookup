@@ -92,6 +92,7 @@ Column Context:
 - `firms_state_agency_code` represents the State Agency Code used for state-facing financial reporting and reconciliation.
 - `cs_database_name` and `hr_database_name` are the Campus Solutions and HR/CHRS production database names.
 - `athena_abbrev`, `business_unit`, and `chrs_company` are PeopleSoft-based identifiers.
+- Wave 4B CHRS mappings are included for East Bay (`EBY`), Los Angeles (`LAS`), San Francisco (`SFO`), and Sonoma (`SSU`), with `chrs_cutover_date = 2026-05-10`.
 
 Columns:
 

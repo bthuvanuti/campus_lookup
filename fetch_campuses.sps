@@ -70,8 +70,8 @@ DO REPEAT code = "01" "05" "15" "25" "30" "40" "45" "65" "66" "70" "75" "80" "85
   IF campus_code = code hr_database_name = value.
 END REPEAT.
 
-DO REPEAT code = "06" "07" "10" "20" "35" "50" "55" "60" "63" "68" "73" "90"
- /value = "MBY" "CMA" "CPP" "CHI" "BAK" "FUL" "DOM" "SAC" "SBU" "CSM" "CIS" "STA".
+DO REPEAT code = "05" "06" "07" "10" "20" "35" "45" "50" "55" "60" "63" "68" "73" "75" "85" "90"
+ /value = "EBY" "MBY" "CMA" "CPP" "CHI" "BAK" "LAS" "FUL" "DOM" "SAC" "SBU" "CSM" "CIS" "SFO" "SSU" "STA".
   IF campus_code = code chrs_company = value.
 END REPEAT.
 
@@ -107,8 +107,8 @@ DO REPEAT code = "01" "05" "06" "07" "10" "15" "20" "25" "30" "35" "40" "45" "50
   IF campus_code = code cirs_campus_name = value.
 END REPEAT.
 
-DO REPEAT code = "06" "07" "10" "20" "35" "50" "55" "60" "63" "68" "73" "90"
- /value = "2026-03-22" "2023-11-12" "2026-03-22" "2025-03-23" "2026-03-22" "2023-11-12" "2026-03-22" "2025-03-23" "2025-03-23" "2026-03-22" "2023-11-12" "2023-11-12".
+DO REPEAT code = "05" "06" "07" "10" "20" "35" "45" "50" "55" "60" "63" "68" "73" "75" "85" "90"
+ /value = "2026-05-10" "2026-03-22" "2023-11-12" "2026-03-22" "2025-03-23" "2026-03-22" "2026-05-10" "2023-11-12" "2026-03-22" "2025-03-23" "2025-03-23" "2026-03-22" "2023-11-12" "2026-05-10" "2026-05-10" "2023-11-12".
   IF campus_code = code chrs_cutover_date = value.
 END REPEAT.
 
