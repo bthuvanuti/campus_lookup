@@ -2,6 +2,8 @@
 
 The main implementation is `fetch_campuses.py`, which fetches the CSU COSAR campus endpoint and builds an expanded campus lookup CSV from it.
 
+Updated through 5/11/26, after CHRS Wave 4B go-live.
+
 Primary Script:
 
 ```powershell
